@@ -14,7 +14,7 @@ body {
 }
 
 /* Container */
-.container, .love-container {
+.container, .love-container, .promise-container { /* Added .promise-container */
   max-width: 800px;
   margin: 0 auto;
 }
@@ -155,7 +155,7 @@ textarea {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .container, .love-container {
+  .container, .love-container, .promise-container { /* Added .promise-container */
     padding: 20px;
   }
   .button-container {
@@ -285,4 +285,125 @@ textarea {
       0 0 30px rgba(255, 255, 255, 0.8),
       0 0 40px rgba(255, 182, 193, 0.6);
   }
+}
+
+/* PromisePage Specific Styles */
+.promise-container {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f0; /* Light pink background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.5); /* Pink shadow */
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.promise-container h1 {
+  color: #ff1493; /* Deep pink for heading */
+  font-size: 2em;
+}
+
+.promise-container p {
+  font-size: 1.2em;
+  color: #333; /* Dark text for readability */
+  margin: 20px 0;
+}
+
+.promise-container .signature {
+  margin-top: 30px;
+  font-style: italic;
+  color: #ff69b4; /* Hot pink for signature */
+}
+
+.promise-container .options {
+  margin-top: 20px;
+}
+
+.promise-container .yes-btn {
+  background-color: #ff69b4; /* Pink button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.promise-container .yes-btn:hover {
+  background-color: #ff1493; /* Darker pink on hover */
+}
+
+.promise-container .no-btn {
+  background-color: #ccc; /* Gray button for no */
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.promise-container .no-btn:hover {
+  background-color: #aaa; /* Darker gray on hover */
+}
+
+.promise-container .response {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ff1493;
+}
+
+/* Thank You Page Styles */
+.thankyou-container {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6e6;
+  color: #d63384;
+  text-align: center;
+  padding: 20px;
+  animation: pulse 3s infinite;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thankyou-container h1 {
+  color: #ff1493;
+  animation: fadeIn 2s ease-in;
+}
+
+.thankyou-container p {
+  animation: fadeIn 3s ease-in;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.thankyou-container .floating-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.thankyou-container .floating-hearts::before {
+  content: '💖 ❤️ 💕 💞';
+  font-size: 2em;
+  position: absolute;
+  animation: float 10s linear infinite;
 }

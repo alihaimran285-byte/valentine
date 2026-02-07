@@ -12,6 +12,8 @@ import eight from '../assets/eight.jfif';
 import seven from '../assets/seven.jfif';
 import six from '../assets/six.jfif';
 
+
+
 function LovePage() {
   const [heartClicks, setHeartClicks] = useState(0);
   const [replyMessage, setReplyMessage] = useState('');
@@ -32,6 +34,10 @@ function LovePage() {
 
   const handleBack = () => {
     navigate('/');
+  };
+
+  const handlePromise = () => {
+    navigate('/promise'); // Navigate to PromisePage
   };
 
   return (
@@ -71,6 +77,8 @@ function LovePage() {
       </audio>
       
       <button onClick={handleBack}>Back to Main Page</button>
+      <button onClick={handlePromise}>Promise Page</button> {/* Added Promise Page button */}
+      
     </div>
   );
 }
