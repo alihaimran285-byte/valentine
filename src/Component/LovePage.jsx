@@ -47,7 +47,7 @@ function LovePage() {
       <h1>You Said Yes! 💖</h1>
       
       <div className="small-heart">
-        <span>A & I</span>
+        <span></span>
       </div>
       
       <p>My dearest love, thank you for saying yes! You make my heart skip a beat every day. I love you more than words can say. Happy Valentine's Day! <span className="heart" onClick={handleHeartClick}>❤️</span></p>
